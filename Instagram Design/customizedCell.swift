@@ -9,9 +9,17 @@
 import UIKit
 
 class customizedCell: UITableViewCell {
+    
+    @IBOutlet weak var userImage: UIImageView!
+    
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        userImage.layoutIfNeeded()
+        userImage.clipsToBounds = true
+        userImage.layer.cornerRadius = userImage.frame.size.width / 2
+        
         // Initialization code
     }
 
